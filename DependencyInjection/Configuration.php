@@ -21,8 +21,8 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->root('soil_smser');
 
         $rootNode->children()
-            ->scalarNode('smspby_endpoint')
-            ->scalarNode('smspby_api_key')
+            ->scalarNode('smspby_endpoint')->isRequired(true)->end()
+            ->scalarNode('smspby_api_key')->isRequired(true)->end()
         ->end();
 
 

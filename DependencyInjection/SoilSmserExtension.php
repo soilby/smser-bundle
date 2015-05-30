@@ -25,7 +25,7 @@ class SoilSmserExtension extends Extension
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
 
-        $container->setParameter('soil_smser.gateway.smsp_by', $config['smspby_endpoint']);
+        $container->setParameter('soil_smser.gateway.smsp_by.endpoint', $config['smspby_endpoint']);
         $container->setParameter('soil_smser.gateway.smsp_by.api_key', $config['smspby_api_key']);
     }
 }

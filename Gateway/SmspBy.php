@@ -43,8 +43,8 @@ class SmspBy implements GatewayInterface {
     public function send($phoneNumber, $smsText, $options)    {
         file_put_contents('/tmp/sms_gateway', '[' . date('Y-m-d H:i:s') . '] - ' . $phoneNumber . ' - ' . $smsText . PHP_EOL, FILE_APPEND);
 
-        $sender = $options['sender'];
-        $urgent = $options['urgent'];
+        $sender = array_key_exists('sender', $options) ? $options['sender'] : 'sender';
+        $urgent = array_key_exists('urgent', $options) ? $options['urgent'] : false;
 
 //        $sender = 'SMSp.by';
 
