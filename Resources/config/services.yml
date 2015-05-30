@@ -1,0 +1,6 @@
+services:
+    soil_smser.gateway.smsp_by
+        class: Soil\SmserBundle\Gateway\SmspBy
+        arguments: [%endpoint%, %apikey%]
+        calls:
+            - [setBuzz, [@buzz.client]]
