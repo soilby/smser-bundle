@@ -12,6 +12,7 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": ">=2.6"
+        "symfony/symfony": ">=2.6",
+        "sensio/buzz-bundle": ">=1.1.0"
     }
 }
